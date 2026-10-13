@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT - AI Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div class="brand-row">
+          <div class="brand">
+            <span class="logo">✳</span>
+            <span>ChatGPT</span>
+          </div>
+          <button class="icon-btn close-sidebar" id="closeSidebar"
+            aria-label="Close sidebar">×</button>
+        </div>
+
+        <button class="new-chat" id="newChat">
+          <span>＋</span> New chat
+        </button>
+
+        <button class="sidebar-item" id="searchButton">
+          <span>⌕</span> Search chats
+        </button>
+
+        <button class="sidebar-item" id="exploreButton">
+          <span>⊞</span> Explore
+        </button>
+
+        <div class="history-title">Your chats</div>
+        <div class="history" id="history">
+          <button class="history-item">Getting started</button>
+        </div>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="profile">
+          <div class="avatar">U</div>
+          <div>
+            <div class="profile-name">User</div>
+            <div class="profile-plan">Free plan</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn menu-btn" id="menuButton"
+            aria-label="Open sidebar">☰</button>
+          <button class="model-btn" id="modelButton">
+            ChatGPT <span class="model-arrow">⌄</span>
+          </button>
+        </div>
+
+        <button class="share-btn" id="shareButton">
+          ↗ <span>Share</span>
+        </button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <h1>What can I help with?</h1>
+
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Help me learn HTML">
+              <span>⌘</span>
+              <span>Learn something</span>
+            </button>
+
+            <button class="suggestion" data-prompt="Write a short story">
+              <span>✎</span>
+              <span>Write anything</span>
+            </button>
+
+            <button class="suggestion" data-prompt="Give me project ideas">
+              <span>⌘</span>
+              <span>Make a plan</span>
+            </button>
+
+            <button class="suggestion" data-prompt="Explain JavaScript simply">
+              <span>⌘</span>
+              <span>Code something</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <!-- Input area -->
+      <footer class="composer-area">
+        <form class="composer" id="chatForm">
+          <textarea
+            id="messageInput"
+            placeholder="Message ChatGPT"
+            rows="1"
+            aria-label="Message ChatGPT"
+          ></textarea>
+
+          <div class="composer-bottom">
+            <div class="composer-tools">
+              <button type="button" class="tool-btn" id="attachButton"
+                aria-label="Attach file">＋</button>
+              <button type="button" class="tool-btn" id="toolsButton">
+                ◉ <span>Tools</span>
+              </button>
+            </div>
+
+            <button class="send-btn" id="sendButton" type="submit"
+              aria-label="Send message">↑</button>
+          </div>
+        </form>
+
+        <p class="disclaimer">
+          This is a demo interface. AI responses may be simulated.
+        </p>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
